@@ -1,0 +1,56 @@
+.Account {
+  text-align: center;
+  background-color: #354a5f;
+  background-image: url("./../bg.jpg");
+  align-items: center;
+  font-size: calc(15px + 2vmin);
+  color: rgb(0, 0, 0);
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Josefin Sans", sans-serif;
+  overflow: hidden;
+  overflow-x: hidden;
+  background-attachment: fixed;
+}
+
+.Text {
+  text-align: center;
+  background-color: white;
+  align-items: center;
+  font-size: calc(2px + 4vmin);
+  color: rgb(0, 0, 0);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Apple {
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Apple {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #1a1a1b;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

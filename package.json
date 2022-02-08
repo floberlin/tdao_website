@@ -1,0 +1,80 @@
+{
+  "homepage": "./",
+  "name": "tdao",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@mdx-js/react": "^1.6.22",
+    "@react-google-maps/api": "^2.2.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@ui5/webcomponents": "^1.1.2",
+    "@ui5/webcomponents-base": "^1.1.2",
+    "@ui5/webcomponents-fiori": "^1.1.2",
+    "@ui5/webcomponents-icons": "^1.1.2",
+    "@ui5/webcomponents-react": "^0.21.2",
+    "@walletconnect/client": "^1.5.4",
+    "@walletconnect/web3-provider": "^1.5.4",
+    "axios": "^0.21.1",
+    "browserify-zlib": "^0.1.4",
+    "buffer": "^6.0.3",
+    "dns.js": "^1.0.1",
+    "ethers": "^5.4.2",
+    "events": "^1.0.0",
+    "https-browserify": "0.0.1",
+    "i18next": "^21.6.6",
+    "i18next-browser-languagedetector": "^6.1.2",
+    "i18next-xhr-backend": "^3.2.2",
+    "ipfs-http-client": "^55.0.0",
+    "path-browserify": "0.0.0",
+    "punycode": "^1.2.4",
+    "react": "^16",
+    "react-blockies": "^1.4.1",
+    "react-device-detect": "^1.17.0",
+    "react-dom": "^16",
+    "react-i18next": "^11.15.3",
+    "react-loader-spinner": "^4.0.0",
+    "react-qr-reader": "^2.2.1",
+    "react-router-dom": "^5.2.0",
+    "react-router-hash-link": "^2.4.3",
+    "react-scripts": "^4.0.3",
+    "react-share": "^4.4.0",
+    "readable-stream": "^1.0.33",
+    "stream-browserify": "^1.0.0",
+    "string_decoder": "^0.10.31",
+    "timers-browserify": "^1.0.1",
+    "url": "^0.10.3",
+    "use-swiper": "^1.2.1",
+    "util": "^0.10.4",
+    "vm-browserify": "0.0.4",
+    "web3": "^1.5.1",
+    "webfontloader": "^1.6.28"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!(@ui5|lit-html)).*\\.js$"
+    ]
+  }
+}

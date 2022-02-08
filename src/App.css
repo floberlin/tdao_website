@@ -1,0 +1,157 @@
+.App {
+  text-align: center;
+  /* background-color: #354a5f; */
+  /* background-image: url("./bg.jpg"); */
+  align-items: center;
+  font-size: calc(15px + 4vmin);
+  color: rgb(0, 0, 0);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Josefin Sans", sans-serif;
+  overflow: scroll;
+  overflow-x: hidden;
+  background-attachment: fixed;
+}
+
+.Feedback-wrapper {
+  position: fixed;
+  right: -29px;
+  top: 52vh;
+  /* height: 250px; */
+  z-index: 1000;
+  transform: rotate(270deg);
+  /* font-family: "72", "72full", Arial, Helvetica, sans-serif; */
+  /* font-size: 14px; */
+  /* color: #32363a; */
+}
+
+.Help-wrapper {
+  position: fixed;
+  right: -12px;
+  top: 44vh;
+  /* height: 250px; */
+  transform: rotate(270deg);
+  z-index: 1000;
+  
+}
+
+.Help-wrapper-open {
+  top: calc(50vh - 125px);
+  right: 2rem;
+  padding: 2rem 1rem 0 1rem;
+  height: auto;
+  border-radius: 0.25rem;
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 0.625rem 1.875rem 0 rgb(0 0 0 / 30%);
+  width: 320px;
+  overflow-y: auto;
+}
+
+.Feedback-wrapper-open {
+  top: calc(50vh - 125px);
+  right: 2rem;
+  padding: 2rem 1rem 0 1rem;
+  height: auto;
+  border-radius: 0.25rem;
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 0.625rem 1.875rem 0 rgb(0 0 0 / 30%);
+  width: 320px;
+  overflow-y: auto;
+}
+
+.Feedback-disclaimer {
+  font-size: 12px;
+  color: #6a6d70;
+  font-family: "72", "72full", Arial, Helvetica, sans-serif;
+}
+
+.Shell {
+  position: fixed;
+  z-index: 2;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+}
+
+.Search {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 9%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.Scan {
+  position: fixed;
+  z-index: 2;
+  top: 30%;
+  bottom: 30%;
+  text-align: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+}
+
+.Border {
+  top: 5;
+  left: 5;
+  right: 5;
+  bottom: 5;
+}
+
+.Menu {
+  text-align: right;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed; /* Sit on top of the page content */
+  /* width: 100%; */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.Apple {
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Apple {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #1a1a1b;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#root {
+  height: 100vh;
+}
