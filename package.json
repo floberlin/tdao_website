@@ -1,61 +1,41 @@
 {
-  "homepage": "./",
-  "name": "tdao",
+  "name": "tdao_website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@mdx-js/react": "^1.6.22",
-    "@react-google-maps/api": "^2.2.0",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@ui5/webcomponents": "^1.1.2",
-    "@ui5/webcomponents-base": "^1.1.2",
-    "@ui5/webcomponents-fiori": "^1.1.2",
-    "@ui5/webcomponents-icons": "^1.1.2",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@ui5/webcomponents": "~1.1.2",
+    "@ui5/webcomponents-fiori": "~1.1.2",
+    "@ui5/webcomponents-icons": "~1.1.2",
     "@ui5/webcomponents-react": "^0.21.2",
-    "@walletconnect/client": "^1.5.4",
-    "@walletconnect/web3-provider": "^1.5.4",
-    "axios": "^0.21.1",
-    "browserify-zlib": "^0.1.4",
-    "buffer": "^6.0.3",
-    "dns.js": "^1.0.1",
-    "ethers": "^5.4.2",
-    "events": "^1.0.0",
-    "https-browserify": "0.0.1",
-    "i18next": "^21.6.6",
-    "i18next-browser-languagedetector": "^6.1.2",
-    "i18next-xhr-backend": "^3.2.2",
-    "ipfs-http-client": "^55.0.0",
-    "path-browserify": "0.0.0",
-    "punycode": "^1.2.4",
-    "react": "^16",
-    "react-blockies": "^1.4.1",
-    "react-device-detect": "^1.17.0",
-    "react-dom": "^16",
-    "react-i18next": "^11.15.3",
-    "react-loader-spinner": "^4.0.0",
-    "react-qr-reader": "^2.2.1",
-    "react-router-dom": "^5.2.0",
-    "react-router-hash-link": "^2.4.3",
-    "react-scripts": "^4.0.3",
-    "react-share": "^4.4.0",
-    "readable-stream": "^1.0.33",
-    "stream-browserify": "^1.0.0",
-    "string_decoder": "^0.10.31",
-    "timers-browserify": "^1.0.1",
-    "url": "^0.10.3",
-    "use-swiper": "^1.2.1",
-    "util": "^0.10.4",
-    "vm-browserify": "0.0.4",
-    "web3": "^1.5.1",
-    "webfontloader": "^1.6.28"
+    "axios": "^0.21.4",
+    "formik": "^2.2.9",
+    "i18next": "^19.9.2",
+    "i18next-browser-languagedetector": "^6.1.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-i18next": "^11.15.4",
+    "react-query": "^3.34.14",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "5.0.0",
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --silent",
+    "eject": "react-scripts eject",
+    "start:mock-server": "nodemon --watch server --exec npx json-server --p 3001 server/mockserver.js --routes server/routes.json",
+    "test:ci": "npm run test -- --watchAll=false",
+    "test:coverage": "npm run test -- --watchAll=false --coverage",
+    "lint": "eslint --quiet .",
+    "lint:fix": "eslint . --fix",
+    "prettier": "prettier --config .prettierrc --check \"src/**/*.js\"",
+    "prettier:fix": "prettier --config .prettierrc --write \"src/**/*.js\"",
+    "pre:push": "npm-run-all --parallel lint prettier test:ci"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -64,7 +44,9 @@
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "not IE 11",
+      "not Edge <= 18"
     ],
     "development": [
       "last 1 chrome version",
@@ -72,9 +54,27 @@
       "last 1 safari version"
     ]
   },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@types/jest": "^26.0.24",
+    "husky": "^4.3.8",
+    "json-server": "^0.16.3",
+    "msw": "^0.26.2",
+    "nodemon": "^2.0.15",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.5.1"
+  },
   "jest": {
     "transformIgnorePatterns": [
       "node_modules/(?!(@ui5|lit-html)).*\\.js$"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run pre:push",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && true"
+    }
   }
 }
