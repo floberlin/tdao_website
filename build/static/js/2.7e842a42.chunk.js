@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktdao_website=self.webpackChunktdao_website||[]).push([[2],{2:function(t,e,a){a.r(e),a.d(e,{default:function(){return c}});a(72791);var n=a(54270),s=a(33168);var r=a.p+"static/media/tdao.c4e35039ac22e5eb164b3ad37ca331e7.svg",i=a(11559),u=a(80184),c=function(){var t=(0,s.$)().t;return(0,u.jsxs)(u.Fragment,{children:[(0,u.jsx)(n.q,{title:t("helmet.title.notfound")}),(0,u.jsx)("br",{}),(0,u.jsx)("br",{}),(0,u.jsx)(i.Z,{image:r,text:t("page.notfound.text")})]})}}}]);
+//# sourceMappingURL=2.7e842a42.chunk.js.map
