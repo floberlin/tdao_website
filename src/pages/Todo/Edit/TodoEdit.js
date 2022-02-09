@@ -20,7 +20,7 @@ const TodoEdit = ({ match }) => {
 
   return (
     <>
-      <Helmet title="Edit - TodoList App" />
+      <Helmet title="Edit - tDAO Website" />
 
       <NavBack />
       <CenteredContent>

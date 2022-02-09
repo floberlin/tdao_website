@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 
-import notfound from "../../assets/notfound.png";
+import wait from "../../assets/tdao.svg";
 import Fallback from "./Fallback";
 
 const NotFound = () => {
@@ -11,9 +11,10 @@ const NotFound = () => {
   return (
     <>
       <Helmet title={t("helmet.title.notfound")} />
+      <br/><br/>
+
       <Fallback
-        image={notfound}
-        altImage={t("page.notfound.alt")}
+        image={wait}
         text={t("page.notfound.text")}
       />
     </>

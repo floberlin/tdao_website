@@ -1,9 +1,9 @@
 {
   "app.generics.close": "Fechar",
-  "helmet.title.app": "TodoList App",
-  "helmet.title.error": "Componente c/ Bug - TodoList App",
-  "helmet.title.notfound": "Não Encontrado - TodoList App",
-  "shell.title": "TodoList App",
+  "helmet.title.app": "tDAO Website",
+  "helmet.title.error": "Componente c/ Bug - tDAO Website",
+  "helmet.title.notfound": "Não Encontrado - tDAO Website",
+  "shell.title": "tDAO Website",
   "shell.logo.alt": "SAP Logo",
   "shell.button.user.settings": "Configurações do Usuário",
   "shell.button.user.settings.item.themeSwitch": "Tema",
