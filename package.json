@@ -1,5 +1,6 @@
 {
   "name": "tdao_website",
+  "homepage": "./",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -27,7 +28,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "CI= react-scripts build",
     "test": "react-scripts test --silent",
     "eject": "react-scripts eject",
     "start:mock-server": "nodemon --watch server --exec npx json-server --p 3001 server/mockserver.js --routes server/routes.json",

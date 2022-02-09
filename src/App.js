@@ -12,13 +12,13 @@ const App = () => {
 
   return (
     <ThemeProvider>
-        <BrowserRouter>
-          <Helmet title={t("helmet.title.app")} />
-          <Shell title={t("shell.title")} />
-          <ErrorBoundary>
-            <Router />
-          </ErrorBoundary>
-        </BrowserRouter>
+      <BrowserRouter>
+        <Helmet title={t("helmet.title.app")} />
+        <Shell title={t("shell.title")} />
+        <ErrorBoundary>
+          <Router />
+        </ErrorBoundary>
+      </BrowserRouter>
     </ThemeProvider>
   );
 };

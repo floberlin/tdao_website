@@ -46,12 +46,7 @@ const Shell = ({ title, ...props }) => {
         data-testid="shell-wrapper"
         primaryTitle={title}
         style={style.shell}
-        logo={
-          <img
-            alt={t("shell.logo.alt")}
-            src="../tdao.svg"
-          />
-        }
+        logo={<img alt={t("shell.logo.alt")} src="../tdao.svg" />}
         onLogoClick={() => history.push(ROUTES.HOME)}
         profile={<Avatar icon="customer" shape={AvatarShape.Circle} />}
         onProfileClick={(e) =>

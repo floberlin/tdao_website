@@ -12,13 +12,11 @@ import CenteredContent from "../../../components/Layout/CenteredContent";
 import { ROUTES } from "../../../routes/Routes";
 
 const TodoList = () => {
-
   return (
     <CenteredContent>
       <Helmet title="List - tDAO Website" />
       <Title level={TitleLevel.H1}>Todo List</Title>
       <br />
-
     </CenteredContent>
   );
 };
