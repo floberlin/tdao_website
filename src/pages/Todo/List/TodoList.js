@@ -6,16 +6,20 @@ import {
   isTablet,
   isPhone,
 } from "@ui5/webcomponents-base/dist/Device.js";
-
 import { Link, Text, Title, TitleLevel } from "@ui5/webcomponents-react";
 import CenteredContent from "../../../components/Layout/CenteredContent";
 import { ROUTES } from "../../../routes/Routes";
+import { useTranslation } from "react-i18next";
+
+
+
 
 const TodoList = () => {
+  const { t } = useTranslation();
   return (
     <CenteredContent>
-      <Helmet title="List - tDAO Website" />
-      <Title level={TitleLevel.H1}>Todo List</Title>
+      <Helmet title={t("helmet.title.notfound")} />
+      <Title level={TitleLevel.H1}>{t("page.notfound.text")}</Title>
       <br />
     </CenteredContent>
   );

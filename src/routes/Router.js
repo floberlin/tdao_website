@@ -13,7 +13,8 @@ const Router = () => {
   return (
     <Suspense fallback={<BusyIndicator active />}>
       <Switch>
-        <Redirect path={ROUTES.HOME} exact to={ROUTES.TODO_LIST} />
+        <Redirect path={ROUTES.HOME} exact to={ROUTES.TODO_LIST}/>
+        <Route path={ROUTES.TODO_LIST} exact component={TodoList} />
         <Route path={ROUTES.BUGGY} exact component={Buggy} />
         <Route path={ROUTES.NOT_FOUND} exact component={NotFound} />
         <Route path={ROUTES.ANY} component={NotFound} />
