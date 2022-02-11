@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { ThemeProvider } from "@ui5/webcomponents-react";
 import ErrorBoundary from "./pages/Fallback/ErrorBoundary";
@@ -12,13 +12,13 @@ const App = () => {
 
   return (
     <ThemeProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Helmet title={t("helmet.title.app")} />
         <Shell title={t("shell.title")} />
         <ErrorBoundary>
           <Router />
         </ErrorBoundary>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   );
 };
