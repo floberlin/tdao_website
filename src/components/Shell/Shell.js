@@ -48,18 +48,18 @@ const Shell = ({ title, ...props }) => {
         style={style.shell}
         logo={<img alt={t("shell.logo.alt")} src="../tdao.svg" />}
         onLogoClick={() => history.push(ROUTES.HOME)}
-        profile={<Avatar icon="customer" shape={AvatarShape.Circle} />}
-        onProfileClick={(e) =>
-          popoverConfigItemsRef.current.showAt(e.detail.targetRef)
-        }
-        {...props}
+        // profile={<Avatar icon="customer" shape={AvatarShape.Circle} />}
+        // onProfileClick={(e) =>
+        //   popoverConfigItemsRef.current.showAt(e.detail.targetRef)
+        // }
+        // {...props}
       />
       <div data-testid="emptySpace-wrapper" style={style.emptySpace} />
-      <PopoverListItems
+      {/* <PopoverListItems
         popoverRef={popoverConfigItemsRef}
         title={t("shell.button.user.settings")}
         items={popoverItems}
-      />
+      /> */}
     </>
   );
 };
